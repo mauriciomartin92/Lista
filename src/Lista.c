@@ -71,6 +71,7 @@ printf("Fin de lista");
 
 int main(){
 
+	printf("creando");
 
 	return EXIT_SUCCESS;
 }
