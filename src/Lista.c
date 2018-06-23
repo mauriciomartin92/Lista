@@ -66,11 +66,21 @@ printf("Fin de lista");
 	return 0;
 }
 
-
-
-
 int main(){
 
+	Nodo* unNodo = NULL;
+
+    unNodo = (Nodo*) malloc(sizeof(Nodo*));
+
+	unNodo->siguiente = NULL;
+
+	strcpy(unNodo->p.nombre, "Juan");
+	unNodo->p.prioridad = 1;
+
+	printf("%s\n",unNodo->p.nombre);
+	printf("%d\n",unNodo->p.prioridad);
+
+	free(unNodo);
 
 	return EXIT_SUCCESS;
 }
