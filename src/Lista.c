@@ -80,7 +80,11 @@ int main(){
 	printf("%s\n",unNodo->p.nombre);
 	printf("%d\n",unNodo->p.prioridad);
 
+<<<<<<< HEAD
 	free(unNodo);
+=======
+	printf("creando");
+>>>>>>> 235b5f9338d646c846c9484d13790f3289f3061f
 
 	return EXIT_SUCCESS;
 }
