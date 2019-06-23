@@ -25,7 +25,7 @@ namespace NumerosComplejos
 
         private void BtnPasajes_Click(object sender, EventArgs e)
         {
-            Form VentanaPasajes = new vector();
+            Form VentanaPasajes = new VentanaPasajes();
             VentanaPasajes.Show();
 
         }

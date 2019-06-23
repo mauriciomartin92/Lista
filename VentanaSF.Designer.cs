@@ -39,7 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBoxResultado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxTipoFasor1 = new System.Windows.Forms.TextBox();
@@ -90,6 +90,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Sumar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click_1);
             // 
             // mtxtBoxFrecAngF2
             // 
@@ -145,12 +146,13 @@
             this.label6.TabIndex = 17;
             this.label6.Text = "Fases";
             // 
-            // textBox1
+            // txtBoxResultado
             // 
-            this.textBox1.Location = new System.Drawing.Point(32, 181);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(275, 20);
-            this.textBox1.TabIndex = 18;
+            this.txtBoxResultado.Location = new System.Drawing.Point(32, 181);
+            this.txtBoxResultado.Name = "txtBoxResultado";
+            this.txtBoxResultado.Size = new System.Drawing.Size(268, 20);
+            this.txtBoxResultado.TabIndex = 18;
+            this.txtBoxResultado.TextChanged += new System.EventHandler(this.TxtBoxResultado_TextChanged);
             // 
             // label1
             // 
@@ -196,7 +198,7 @@
             this.Controls.Add(this.txtBoxTipoFasor1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBoxResultado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -227,7 +229,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBoxResultado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBoxTipoFasor1;

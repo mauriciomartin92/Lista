@@ -17,7 +17,7 @@ namespace NumerosComplejos
             InitializeComponent();
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void Button1_Click_1(object sender, EventArgs e)
         {
             double AmpAngF1 = Convert.ToDouble(mtxtBoxAmp1.Text);
             double AmpAngF2 = Convert.ToDouble(mtxtBoxAmp2.Text);
@@ -58,9 +58,9 @@ namespace NumerosComplejos
                 double resultAmp = Math.Sqrt(Math.Pow(resultRe, 2) + Math.Pow(resultIm, 2));
                 double Fase = Math.Atan(resultRe / resultIm);
 
-                //Asingo resultado en cuadro
-                txtBoxResultado.Text = Convert.ToString(resultAmp+"Cos( "+FAngF1+"*t+"+ Math.Round(Fase)+")");
-                
+                //Asigno resultado en cuadro
+                txtBoxResultado.Text = Convert.ToString(resultAmp + "Cos( " + FAngF1 + "*t+" + Math.Round(Fase) + ")");
+
             }
             else { MessageBox.Show("Las frecuencias angulares no coinciden"); }
             
@@ -75,6 +75,11 @@ namespace NumerosComplejos
         private void TxtBoxTipoFasor1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TxtBoxResultado_TextChanged(object sender, EventArgs e)
+        {
+         
         }
     }
 }
