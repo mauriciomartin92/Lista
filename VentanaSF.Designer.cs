@@ -28,13 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mtxtBoxAmp1 = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtBoxFrecAngF1 = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtBoxFaseF1 = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtBoxAmp2 = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.mtxtBoxFrecAngF2 = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtBoxFaseF2 = new System.Windows.Forms.MaskedTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,46 +38,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxTipoFasor1 = new System.Windows.Forms.TextBox();
             this.txtBoxTipoFasor2 = new System.Windows.Forms.TextBox();
+            this.mtxtBoxAmp1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtBoxAmp2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtBoxFrecAngF1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtBoxFrecAngF2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtBoxFaseF1 = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtBoxFaseF2 = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
-            // 
-            // mtxtBoxAmp1
-            // 
-            this.mtxtBoxAmp1.Location = new System.Drawing.Point(122, 31);
-            this.mtxtBoxAmp1.Mask = "99999";
-            this.mtxtBoxAmp1.Name = "mtxtBoxAmp1";
-            this.mtxtBoxAmp1.Size = new System.Drawing.Size(39, 20);
-            this.mtxtBoxAmp1.TabIndex = 3;
-            this.mtxtBoxAmp1.ValidatingType = typeof(int);
-            // 
-            // mtxtBoxFrecAngF1
-            // 
-            this.mtxtBoxFrecAngF1.Location = new System.Drawing.Point(238, 31);
-            this.mtxtBoxFrecAngF1.Mask = "99999";
-            this.mtxtBoxFrecAngF1.Name = "mtxtBoxFrecAngF1";
-            this.mtxtBoxFrecAngF1.Size = new System.Drawing.Size(39, 20);
-            this.mtxtBoxFrecAngF1.TabIndex = 4;
-            this.mtxtBoxFrecAngF1.ValidatingType = typeof(int);
-            // 
-            // mtxtBoxFaseF1
-            // 
-            this.mtxtBoxFaseF1.Location = new System.Drawing.Point(290, 31);
-            this.mtxtBoxFaseF1.Mask = "99999";
-            this.mtxtBoxFaseF1.Name = "mtxtBoxFaseF1";
-            this.mtxtBoxFaseF1.Size = new System.Drawing.Size(39, 20);
-            this.mtxtBoxFaseF1.TabIndex = 6;
-            this.mtxtBoxFaseF1.ValidatingType = typeof(int);
-            // 
-            // mtxtBoxAmp2
-            // 
-            this.mtxtBoxAmp2.Location = new System.Drawing.Point(122, 69);
-            this.mtxtBoxAmp2.Mask = "99999";
-            this.mtxtBoxAmp2.Name = "mtxtBoxAmp2";
-            this.mtxtBoxAmp2.Size = new System.Drawing.Size(39, 20);
-            this.mtxtBoxAmp2.TabIndex = 7;
-            this.mtxtBoxAmp2.ValidatingType = typeof(int);
             // 
             // button1
             // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(0, 124);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(337, 23);
@@ -91,24 +56,6 @@
             this.button1.Text = "Sumar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click_1);
-            // 
-            // mtxtBoxFrecAngF2
-            // 
-            this.mtxtBoxFrecAngF2.Location = new System.Drawing.Point(238, 69);
-            this.mtxtBoxFrecAngF2.Mask = "99999";
-            this.mtxtBoxFrecAngF2.Name = "mtxtBoxFrecAngF2";
-            this.mtxtBoxFrecAngF2.Size = new System.Drawing.Size(39, 20);
-            this.mtxtBoxFrecAngF2.TabIndex = 12;
-            this.mtxtBoxFrecAngF2.ValidatingType = typeof(int);
-            // 
-            // mtxtBoxFaseF2
-            // 
-            this.mtxtBoxFaseF2.Location = new System.Drawing.Point(290, 69);
-            this.mtxtBoxFaseF2.Mask = "99999";
-            this.mtxtBoxFaseF2.Name = "mtxtBoxFaseF2";
-            this.mtxtBoxFaseF2.Size = new System.Drawing.Size(39, 20);
-            this.mtxtBoxFaseF2.TabIndex = 13;
-            this.mtxtBoxFaseF2.ValidatingType = typeof(int);
             // 
             // label3
             // 
@@ -178,7 +125,6 @@
             this.txtBoxTipoFasor1.Name = "txtBoxTipoFasor1";
             this.txtBoxTipoFasor1.Size = new System.Drawing.Size(39, 20);
             this.txtBoxTipoFasor1.TabIndex = 21;
-            this.txtBoxTipoFasor1.Text = "Sen\r\nCos";
             // 
             // txtBoxTipoFasor2
             // 
@@ -187,13 +133,62 @@
             this.txtBoxTipoFasor2.Name = "txtBoxTipoFasor2";
             this.txtBoxTipoFasor2.Size = new System.Drawing.Size(39, 20);
             this.txtBoxTipoFasor2.TabIndex = 23;
-            this.txtBoxTipoFasor2.Text = "Sen\r\nCos";
+            // 
+            // mtxtBoxAmp1
+            // 
+            this.mtxtBoxAmp1.Location = new System.Drawing.Point(122, 31);
+            this.mtxtBoxAmp1.Name = "mtxtBoxAmp1";
+            this.mtxtBoxAmp1.Size = new System.Drawing.Size(39, 20);
+            this.mtxtBoxAmp1.TabIndex = 24;
+            // 
+            // mtxtBoxAmp2
+            // 
+            this.mtxtBoxAmp2.Location = new System.Drawing.Point(122, 69);
+            this.mtxtBoxAmp2.Name = "mtxtBoxAmp2";
+            this.mtxtBoxAmp2.Size = new System.Drawing.Size(39, 20);
+            this.mtxtBoxAmp2.TabIndex = 25;
+            // 
+            // mtxtBoxFrecAngF1
+            // 
+            this.mtxtBoxFrecAngF1.Location = new System.Drawing.Point(238, 31);
+            this.mtxtBoxFrecAngF1.Name = "mtxtBoxFrecAngF1";
+            this.mtxtBoxFrecAngF1.Size = new System.Drawing.Size(39, 20);
+            this.mtxtBoxFrecAngF1.TabIndex = 26;
+            // 
+            // mtxtBoxFrecAngF2
+            // 
+            this.mtxtBoxFrecAngF2.Location = new System.Drawing.Point(238, 69);
+            this.mtxtBoxFrecAngF2.Name = "mtxtBoxFrecAngF2";
+            this.mtxtBoxFrecAngF2.Size = new System.Drawing.Size(39, 20);
+            this.mtxtBoxFrecAngF2.TabIndex = 27;
+            // 
+            // mtxtBoxFaseF1
+            // 
+            this.mtxtBoxFaseF1.Location = new System.Drawing.Point(290, 31);
+            this.mtxtBoxFaseF1.Name = "mtxtBoxFaseF1";
+            this.mtxtBoxFaseF1.Size = new System.Drawing.Size(39, 20);
+            this.mtxtBoxFaseF1.TabIndex = 28;
+            this.mtxtBoxFaseF1.Text = "0";
+            // 
+            // mtxtBoxFaseF2
+            // 
+            this.mtxtBoxFaseF2.Location = new System.Drawing.Point(290, 69);
+            this.mtxtBoxFaseF2.Name = "mtxtBoxFaseF2";
+            this.mtxtBoxFaseF2.Size = new System.Drawing.Size(39, 20);
+            this.mtxtBoxFaseF2.TabIndex = 29;
+            this.mtxtBoxFaseF2.Text = "0";
             // 
             // VentanaSF
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 225);
+            this.Controls.Add(this.mtxtBoxFaseF2);
+            this.Controls.Add(this.mtxtBoxFaseF1);
+            this.Controls.Add(this.mtxtBoxFrecAngF2);
+            this.Controls.Add(this.mtxtBoxFrecAngF1);
+            this.Controls.Add(this.mtxtBoxAmp2);
+            this.Controls.Add(this.mtxtBoxAmp1);
             this.Controls.Add(this.txtBoxTipoFasor2);
             this.Controls.Add(this.txtBoxTipoFasor1);
             this.Controls.Add(this.label2);
@@ -203,13 +198,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.mtxtBoxFaseF2);
-            this.Controls.Add(this.mtxtBoxFrecAngF2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.mtxtBoxAmp2);
-            this.Controls.Add(this.mtxtBoxFaseF1);
-            this.Controls.Add(this.mtxtBoxFrecAngF1);
-            this.Controls.Add(this.mtxtBoxAmp1);
             this.Name = "VentanaSF";
             this.Text = "Suma de fasores";
             this.ResumeLayout(false);
@@ -218,13 +207,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.MaskedTextBox mtxtBoxAmp1;
-        private System.Windows.Forms.MaskedTextBox mtxtBoxFrecAngF1;
-        private System.Windows.Forms.MaskedTextBox mtxtBoxFaseF1;
-        private System.Windows.Forms.MaskedTextBox mtxtBoxAmp2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.MaskedTextBox mtxtBoxFrecAngF2;
-        private System.Windows.Forms.MaskedTextBox mtxtBoxFaseF2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
@@ -234,5 +217,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBoxTipoFasor1;
         private System.Windows.Forms.TextBox txtBoxTipoFasor2;
+        private System.Windows.Forms.MaskedTextBox mtxtBoxAmp1;
+        private System.Windows.Forms.MaskedTextBox mtxtBoxAmp2;
+        private System.Windows.Forms.MaskedTextBox mtxtBoxFrecAngF1;
+        private System.Windows.Forms.MaskedTextBox mtxtBoxFrecAngF2;
+        private System.Windows.Forms.MaskedTextBox mtxtBoxFaseF1;
+        private System.Windows.Forms.MaskedTextBox mtxtBoxFaseF2;
     }
 }

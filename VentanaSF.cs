@@ -12,6 +12,8 @@ namespace NumerosComplejos
 {
     public partial class VentanaSF : Form
     {
+        public double Fase { get; private set; }
+
         public VentanaSF()
         {
             InitializeComponent();
@@ -31,7 +33,7 @@ namespace NumerosComplejos
             // opero primer fasor
             while(tipoF1 == "Sen")
             {
-                FaseF1 += 0.5; //si  es una funcion senoidal paso a cosenoidal
+                FaseF1 += 90; //si  es una funcion senoidal paso a cosenoidal
                 tipoF1 = "Cos";
             }
             if (tipoF1 != "Sen" & tipoF1 != "Cos") { MessageBox.Show("Ingrese 'Sen' o 'Cos' para tipo de Fasor"); }
@@ -40,29 +42,40 @@ namespace NumerosComplejos
 
             while(tipoF2 == "Sen")
             {
-                FaseF2 += 0.5; //si  es una funcion senoidal paso a cosenoidal
+                FaseF2 += 90; //si  es una funcion senoidal paso a cosenoidal
                 tipoF2 = "Cos";
             }
             if (tipoF2 != "Sen" & tipoF2 != "Cos") { MessageBox.Show("Ingrese 'Sen' o 'Cos' para tipo de Fasor"); }
 
-            if (FAngF1 == FAngF2)
+            if (FAngF1 == FAngF2 & AmpAngF1 >= 0 & AmpAngF2 >= 0)
             {
-                double a1 = AmpAngF1 * Math.Cos(FAngF1);
-                double b1 = AmpAngF1 * Math.Sin(FAngF1);
-                double a2 = AmpAngF2 * Math.Cos(FAngF2);
-                double b2 = AmpAngF2 * Math.Sin(FAngF2);
+                //Fasor 1
+                double a1 = AmpAngF1 * Math.Cos(FaseF1);
+                double b1 = AmpAngF1 * Math.Sin(FaseF1);
+                //Fasor 2
+                double a2 = AmpAngF2 * Math.Cos(FaseF2);
+                double b2 = AmpAngF2 * Math.Sin(FaseF2);
 
                 double resultRe = a1 + a2;
                 double resultIm = b2 + b1;
 
                 double resultAmp = Math.Sqrt(Math.Pow(resultRe, 2) + Math.Pow(resultIm, 2));
-                double Fase = Math.Atan(resultRe / resultIm);
+
+                //opero resultado segun cuadrante de numero complejo para obtener Fase
+                double Fase;
+                if(resultRe<0 & resultIm < 0)
+                {
+                     Fase = Math.Atan(resultIm/resultRe) - 180;
+                }   if (resultRe < 0 & resultIm > 0)
+                    {
+                        Fase = Math.Atan(resultIm / resultRe) + 180;
+                    } else {  Fase = Math.Atan(resultIm / resultRe); }
 
                 //Asigno resultado en cuadro
-                txtBoxResultado.Text = Convert.ToString(resultAmp + "Cos( " + FAngF1 + "*t+" + Math.Round(Fase) + ")");
+                txtBoxResultado.Text = Convert.ToString("f(x)= "+ Math.Round(resultAmp,2) + "*Cos( " + FAngF1 + "*t+" + Math.Round(Fase,2) + ")");  
 
             }
-            else { MessageBox.Show("Las frecuencias angulares no coinciden"); }
+            else { MessageBox.Show("Las frecuencias angulares no coinciden y/o amplitudes negativas"); }
             
         }
 
