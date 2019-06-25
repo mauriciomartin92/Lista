@@ -19,6 +19,11 @@ namespace NumerosComplejos
             InitializeComponent();
         }
 
+        //Funcion que transforma angulo a radianes
+        public static double rad(double drag)
+        {
+            return ((drag / 180 * Math.PI));
+        }
         private void Button1_Click_1(object sender, EventArgs e)
         {
             double AmpAngF1 = Convert.ToDouble(mtxtBoxAmp1.Text);
@@ -33,7 +38,7 @@ namespace NumerosComplejos
             // opero primer fasor
             while(tipoF1 == "Sen")
             {
-                FaseF1 += 90; //si  es una funcion senoidal paso a cosenoidal
+                FaseF1 -= 90; //si  es una funcion senoidal paso a cosenoidal
                 tipoF1 = "Cos";
             }
             if (tipoF1 != "Sen" & tipoF1 != "Cos") { MessageBox.Show("Ingrese 'Sen' o 'Cos' para tipo de Fasor"); }
@@ -42,19 +47,23 @@ namespace NumerosComplejos
 
             while(tipoF2 == "Sen")
             {
-                FaseF2 += 90; //si  es una funcion senoidal paso a cosenoidal
+                FaseF2 -= 90; //si  es una funcion senoidal paso a cosenoidal
                 tipoF2 = "Cos";
             }
             if (tipoF2 != "Sen" & tipoF2 != "Cos") { MessageBox.Show("Ingrese 'Sen' o 'Cos' para tipo de Fasor"); }
+            
 
             if (FAngF1 == FAngF2 & AmpAngF1 >= 0 & AmpAngF2 >= 0)
             {
                 //Fasor 1
-                double a1 = AmpAngF1 * Math.Cos(FaseF1);
-                double b1 = AmpAngF1 * Math.Sin(FaseF1);
+                double a1 = AmpAngF1 * Math.Cos(rad(FaseF1));
+                double b1 = AmpAngF1 * Math.Sin(rad(FaseF1));
                 //Fasor 2
-                double a2 = AmpAngF2 * Math.Cos(FaseF2);
-                double b2 = AmpAngF2 * Math.Sin(FaseF2);
+                double a2 = AmpAngF2 * Math.Cos(rad(FaseF2));
+                double b2 = AmpAngF2 * Math.Sin(rad(FaseF2));
+
+                 label.Text = Convert.ToString(a1);
+             //  label.Text = Convert.ToString(Math.Cos(FaseF1));
 
                 double resultRe = a1 + a2;
                 double resultIm = b2 + b1;
@@ -65,35 +74,20 @@ namespace NumerosComplejos
                 double Fase;
                 if(resultRe<0 & resultIm < 0)
                 {
-                     Fase = Math.Atan(resultIm/resultRe) - 180;
+                     Fase = Math.Atan(rad(resultIm/resultRe)) - 1;
                 }   if (resultRe < 0 & resultIm > 0)
                     {
-                        Fase = Math.Atan(resultIm / resultRe) + 180;
-                    } else {  Fase = Math.Atan(resultIm / resultRe); }
+                        Fase = Math.Atan(rad(resultIm / resultRe)) + 1;
+                    } else {  Fase = Math.Atan((resultIm/resultRe)); }
 
                 //Asigno resultado en cuadro
-                txtBoxResultado.Text = Convert.ToString("f(x)= "+ Math.Round(resultAmp,2) + "*Cos( " + FAngF1 + "*t+" + Math.Round(Fase,2) + ")");  
+                labelResultAmp.Text = Convert.ToString("f(x)= "+ Math.Round(resultAmp,2) + "*Cos( " + FAngF1 + "*t+" + Math.Round(Fase,2) + ")");  
 
             }
             else { MessageBox.Show("Las frecuencias angulares no coinciden y/o amplitudes negativas"); }
             
         }
 
-      
-        private void VentanaSF_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtBoxTipoFasor1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TxtBoxResultado_TextChanged(object sender, EventArgs e)
-        {
-         
-        }
     }
 }
 

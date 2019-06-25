@@ -33,7 +33,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtBoxResultado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtBoxTipoFasor1 = new System.Windows.Forms.TextBox();
@@ -44,6 +43,8 @@
             this.mtxtBoxFrecAngF2 = new System.Windows.Forms.MaskedTextBox();
             this.mtxtBoxFaseF1 = new System.Windows.Forms.MaskedTextBox();
             this.mtxtBoxFaseF2 = new System.Windows.Forms.MaskedTextBox();
+            this.labelResultAmp = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -89,17 +90,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(287, 2);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.Size = new System.Drawing.Size(48, 13);
             this.label6.TabIndex = 17;
-            this.label6.Text = "Fases";
-            // 
-            // txtBoxResultado
-            // 
-            this.txtBoxResultado.Location = new System.Drawing.Point(32, 181);
-            this.txtBoxResultado.Name = "txtBoxResultado";
-            this.txtBoxResultado.Size = new System.Drawing.Size(268, 20);
-            this.txtBoxResultado.TabIndex = 18;
-            this.txtBoxResultado.TextChanged += new System.EventHandler(this.TxtBoxResultado_TextChanged);
+            this.label6.Text = "Fases (°)";
             // 
             // label1
             // 
@@ -178,11 +171,39 @@
             this.mtxtBoxFaseF2.TabIndex = 29;
             this.mtxtBoxFaseF2.Text = "0";
             // 
+            // labelResultAmp
+            // 
+            this.labelResultAmp.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelResultAmp.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.labelResultAmp.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelResultAmp.Location = new System.Drawing.Point(49, 185);
+            this.labelResultAmp.Name = "labelResultAmp";
+            this.labelResultAmp.Padding = new System.Windows.Forms.Padding(3, 10, 10, 3);
+            this.labelResultAmp.Size = new System.Drawing.Size(256, 30);
+            this.labelResultAmp.TabIndex = 30;
+            // 
+            // label
+            // 
+            this.label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(49, 150);
+            this.label.Name = "label";
+            this.label.Padding = new System.Windows.Forms.Padding(3, 10, 10, 3);
+            this.label.Size = new System.Drawing.Size(256, 26);
+            this.label.TabIndex = 31;
+            // 
             // VentanaSF
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 225);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(343, 260);
+            this.Controls.Add(this.label);
+            this.Controls.Add(this.labelResultAmp);
             this.Controls.Add(this.mtxtBoxFaseF2);
             this.Controls.Add(this.mtxtBoxFaseF1);
             this.Controls.Add(this.mtxtBoxFrecAngF2);
@@ -193,7 +214,6 @@
             this.Controls.Add(this.txtBoxTipoFasor1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtBoxResultado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -212,7 +232,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtBoxResultado;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBoxTipoFasor1;
@@ -223,5 +242,7 @@
         private System.Windows.Forms.MaskedTextBox mtxtBoxFrecAngF2;
         private System.Windows.Forms.MaskedTextBox mtxtBoxFaseF1;
         private System.Windows.Forms.MaskedTextBox mtxtBoxFaseF2;
+        public System.Windows.Forms.Label labelResultAmp;
+        public System.Windows.Forms.Label label;
     }
 }
