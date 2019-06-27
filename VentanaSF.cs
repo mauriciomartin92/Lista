@@ -62,9 +62,6 @@ namespace NumerosComplejos
                 double a2 = AmpAngF2 * Math.Cos(rad(FaseF2));
                 double b2 = AmpAngF2 * Math.Sin(rad(FaseF2));
 
-                 label.Text = Convert.ToString(a1);
-             //  label.Text = Convert.ToString(Math.Cos(FaseF1));
-
                 double resultRe = a1 + a2;
                 double resultIm = b2 + b1;
 
